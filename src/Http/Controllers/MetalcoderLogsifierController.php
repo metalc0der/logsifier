@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use Metalc0der\Logsifier\Models\Log;
+use Metalcoder\Logsifier\Models\Log;
 use App\Http\Controllers\Validator;
 use DB;
 use Carbon\Carbon;
