@@ -1,0 +1,21 @@
+{
+    "name": "metalc0der/logsifier",
+    "description": "Package to manage application logs",
+    "authors": [
+        {
+            "name": "Yunior Rodriguez",
+            "email": "yunior.rdguez@gmail.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+		"Metalc0der\\Logsifier\\": "src/"
+		}
+	},
+	"require": {
+		"illuminate/support": "~5",
+		"maatwebsite/excel": "~2.1.0",
+		"php": ">=5.5.9"
+	},
+	"minimum-stability": "dev",
+}
