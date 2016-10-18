@@ -17,7 +17,7 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
         //Publish migrations
        // $this->publishes([__DIR__ . '/migrations/2016_05_17_183336_create_pd_log_table.php' => base_path('database/migrations/2016_05_17_183336_create_pd_log_table.php')]);
 
-        $this->publishes([__DIR__.'/migrations/' => database_path('/migrations')], 'migrations');
+        $this->loadMigrationsFrom(__DIR__.'/migrations/');
         
     }
 
@@ -29,7 +29,7 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
     public function register()
     {
         
-        include __DIR__.'/Http/routes.php';
+
 
     }
 }
