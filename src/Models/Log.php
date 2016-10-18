@@ -1,6 +1,6 @@
 <?php
 
-namespace Metalc0der\Logsifier\Models;
+namespace Metalcoder\Logsifier\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

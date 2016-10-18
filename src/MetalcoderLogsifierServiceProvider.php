@@ -1,10 +1,10 @@
 <?php
 
-namespace Metalc0der\Logsifier;
+namespace Metalcoder\Logsifier;
 
 use Illuminate\Support\ServiceProvider;
 
-class Metalc0derLogsifierServiceProvider extends ServiceProvider
+class MetalcoderLogsifierServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

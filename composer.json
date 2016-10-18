@@ -1,5 +1,5 @@
 {
-    "name": "metalc0der/logsifier",
+    "name": "metalcoder/logsifier",
     "description": "Package to manage application logs",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "autoload": {
 		"psr-4": {
-		"Metalc0der\\Logsifier\\": "src/"
+		"Metalcoder\\Logsifier\\": "src/"
 		}
 	},
 	"require": {

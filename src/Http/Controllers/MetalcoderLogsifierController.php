@@ -1,6 +1,6 @@
 <?php
 
-namespace Metalc0der\Logsifier\Http\Controllers;
+namespace Metalcoder\Logsifier\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -11,7 +11,7 @@ use App\Http\Controllers\Validator;
 use DB;
 use Carbon\Carbon;
 
-class Metalc0derLogsifierController extends Controller {
+class MetalcoderLogsifierController extends Controller {
 
     protected function rules() {
 
