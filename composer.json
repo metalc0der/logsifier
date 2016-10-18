@@ -7,15 +7,19 @@
             "email": "yunior.rdguez@gmail.com"
         }
     ],
+
+    "minimum-stability": "dev",
+
     "autoload": {
 		"psr-4": {
 		"Metalcoder\\Logsifier\\": "src/"
 		}
 	},
+	
 	"require": {
 		"illuminate/support": "~5",
 		"maatwebsite/excel": "~2.1.0",
 		"php": ">=5.5.9"
-	},
-	"minimum-stability": "dev",
+	}
+	
 }
