@@ -12,6 +12,6 @@ class Logsifier extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'MetalcoderLogsifierController'; // the IoC binding.
+        return 'Http\Controllers\MetalcoderLogsifierController'; // the IoC binding.
     }
 }
