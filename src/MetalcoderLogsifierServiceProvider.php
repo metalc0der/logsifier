@@ -29,7 +29,12 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
     public function register()
     {
         
+        $this->app->singleton('metalcoder.logsifier', function($app)
+        {
+            
+            return new \Metalcoder\Logsifier\src\Http\Controllers\MetalcoderLogsifierController();
 
+        });
 
     }
 }
