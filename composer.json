@@ -1,6 +1,8 @@
 {
     "name": "metalcoder/logsifier",
     "description": "Package to manage application logs",
+    "keywords": ["laravel", "logs"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Yunior Rodriguez",
