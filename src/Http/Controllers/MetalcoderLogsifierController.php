@@ -55,10 +55,9 @@ class MetalcoderLogsifierController extends Controller {
      *
      * 
      */
-    public function index(Request $request) {
+    public function index() {
 
         $target = '';
-        $input = $request->all();
 
         return Log::orderBy('log_id', 'desc');
 
