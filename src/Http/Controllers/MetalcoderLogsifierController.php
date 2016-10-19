@@ -10,6 +10,7 @@ use Metalcoder\Logsifier\Models\Log;
 use App\Http\Controllers\Validator;
 use DB;
 use Carbon\Carbon;
+use Excel;
 
 class MetalcoderLogsifierController extends Controller {
 
@@ -57,9 +58,9 @@ class MetalcoderLogsifierController extends Controller {
      */
     public function index() {
 
-        $target = '';
 
-        return Log::orderBy('log_id', 'desc');
+        return Log::orderBy('log_id', 'desc')
+                    ->get();
 
    
     }
@@ -74,8 +75,7 @@ class MetalcoderLogsifierController extends Controller {
         $logs = Log::selectRaw("user_id,ip,log_date,object,object_id,source,description")
                     ->get();
 
-        $export = new ExcelController();
-        $export->export('Logs-'Carbon::now()->timestamp,$logs);
+        $this->export('Logs-'.Carbon::now()->timestamp,$logs);
 
    
     }
@@ -95,6 +95,21 @@ class MetalcoderLogsifierController extends Controller {
         }
 
    
+    }
+
+    public function export($filename,$data)
+    {
+
+        Excel::create($filename, function($excel) use($data) {
+
+            $excel->sheet('Main', function($sheet) use($data) {
+
+                $sheet->fromArray($data);
+
+            });
+
+        })->export('csv');
+
     }
 
 }

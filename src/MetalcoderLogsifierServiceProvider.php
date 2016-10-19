@@ -14,10 +14,6 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        //Publish migrations
-       // $this->publishes([__DIR__ . '/migrations/2016_05_17_183336_create_pd_log_table.php' => base_path('database/migrations/2016_05_17_183336_create_pd_log_table.php')]);
-
-        $this->loadMigrationsFrom(__DIR__.'/migrations/');
         
     }
 
@@ -32,7 +28,7 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
         $this->app->singleton('metalcoder.logsifier', function($app)
         {
             
-            return new \metalcoder\logsifier\src\Http\Controllers\MetalcoderLogsifierController();
+            return new Http\Controllers\MetalcoderLogsifierController();
 
         });
 
