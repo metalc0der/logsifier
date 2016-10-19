@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Metalcoder\Logsifier\Models\Log;
 use App\Http\Controllers\Validator;
-use DB;
 use Carbon\Carbon;
 use Excel;
 
