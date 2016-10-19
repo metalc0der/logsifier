@@ -1,6 +1,6 @@
 <?php 
 
-namespace Metalcoder\Logsifier\Facades;
+namespace Metalcoder\Logsifier;
 
 use Illuminate\Support\Facades\Facade;
 
