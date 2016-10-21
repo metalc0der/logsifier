@@ -34,7 +34,7 @@ class MetalcoderLogsifierController extends Controller {
      * 
      * 
      */
-    public function store($ip,$object,$object_id,$description,$source)
+    public function store($ip,$object,$object_id,$description,$source,$urgent = false)
     {
       
 
@@ -47,6 +47,13 @@ class MetalcoderLogsifierController extends Controller {
                             'source' => $source,
 
                             ]);
+
+     /*   if($urgent) {
+
+            config('bleh.message')
+
+
+        }*/
 
     }
 

@@ -14,7 +14,8 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        
+        $this->publishes([__DIR__.'/Config/logsifier.php' => config_path('logsifier.php'),], 'config');
+
     }
 
     /**
@@ -31,6 +32,9 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
             return new Http\Controllers\MetalcoderLogsifierController();
 
         });
+
+        // Config
+        $this->mergeConfigFrom( __DIR__.'/Config/logsifier.php', 'logsifier');
 
     }
 }
