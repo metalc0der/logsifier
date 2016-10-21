@@ -14,7 +14,7 @@ class MetalcoderLogsifierServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        $this->publishes([__DIR__.'/Config/logsifier.php' => config_path('logsifier.php'),], 'config');
+        $this->publishes([__DIR__.'/Config/logsifier.php' => config_path('logsifier.php')], 'config');
 
     }
 
