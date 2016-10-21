@@ -11,6 +11,7 @@
 	    |
 	    */
 
-	    'emails' => []
+	    'recipients' => [],
+	    'from' => ''
 
 	 ];

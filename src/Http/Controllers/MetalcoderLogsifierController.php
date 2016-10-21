@@ -48,12 +48,31 @@ class MetalcoderLogsifierController extends Controller {
 
                             ]);
 
-     /*   if($urgent) {
+        if($urgent) {
 
-            config('bleh.message')
+            $html = "<h3>Your application has registered a severe log entry !!!</h3";
+            $html = $html."<p>User: ".$log->user_id."</p>";
+            $html = $html."<p>IP: ".$log->ip."</p>";
+            $html = $html."<p>Date: ".$log->log_date."</p>";
+            $html = $html."<p>Object: ".$log->object."</p>";
+            $html = $html."<p>Object Id: ".$log->object_id."</p>";
+            $html = $html."<p>Description: ".$log->description."</p>";
+            $html = $html."<p>Source: ".$log->source."</p>";
+
+            foreach (config('logsifier.recipients') as $email) {
+
+                Mail::send(array(), array(), function ($message) use ($html) {
+                  $message->to($email)
+                    ->subject("Severe app log entry registered !!!")
+                    ->from(config('logsifier.from') )
+                    ->setBody($html, 'text/html');
+                });
+
+            }
+            
 
 
-        }*/
+        }
 
     }
 
