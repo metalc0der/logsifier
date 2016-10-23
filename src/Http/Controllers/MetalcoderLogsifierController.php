@@ -63,7 +63,7 @@ class MetalcoderLogsifierController extends Controller {
 
             foreach (config('logsifier.recipients') as $email) {
 
-                Mail::send(array(), array(), function ($message) use ($html) {
+                Mail::send(array(), array(), function ($message) use ($html,$email) {
                   $message->to($email)
                     ->subject("Severe app log entry registered !!!")
                     ->from(config('logsifier.from') )
