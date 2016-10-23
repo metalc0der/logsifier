@@ -10,6 +10,7 @@ use Metalcoder\Logsifier\Models\Log;
 use App\Http\Controllers\Validator;
 use Carbon\Carbon;
 use Excel;
+use Auth;
 
 class MetalcoderLogsifierController extends Controller {
 
