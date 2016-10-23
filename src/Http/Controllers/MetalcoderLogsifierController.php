@@ -11,6 +11,7 @@ use App\Http\Controllers\Validator;
 use Carbon\Carbon;
 use Excel;
 use Auth;
+use Mail;
 
 class MetalcoderLogsifierController extends Controller {
 
