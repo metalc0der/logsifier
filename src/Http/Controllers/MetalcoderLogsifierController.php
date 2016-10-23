@@ -39,7 +39,7 @@ class MetalcoderLogsifierController extends Controller {
     {
       
 
-        $log = Log::create(['user_id' => Auth::user()->id,
+        $log = Log::create(['user_id' => isset(Auth::user()) ? Auth::user()->id : 1,
                             'ip' => $ip,
                             'log_date' => Carbon::now(),
                             'object' => $object,
